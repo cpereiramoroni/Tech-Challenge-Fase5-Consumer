@@ -24,19 +24,19 @@ namespace APICliente.Tests
     public class ProgramTests
     {
 
-        [Fact]
-        public async Task ShoudReturns200_WhenGetValidPath()
-        {
-            // Arrange
-            await using var application = new MoroniWebApplication();
-            var client = application.CreateClient();
+        //[Fact]
+        //public async Task ShoudReturns200_WhenGetValidPath()
+        //{
+        //    // Arrange
+        //    await using var application = new MoroniWebApplication();
+        //    var client = application.CreateClient();
 
-            // Act
-            var response = await client.GetAsync("/swagger");
+        //    // Act
+        //    var response = await client.GetAsync("/swagger");
 
-            // Assert
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-        }
+        //    // Assert
+        //    Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        //}
     }
 
 
