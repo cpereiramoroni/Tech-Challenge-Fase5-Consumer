@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\App.Application\App.Application.csproj" />
+		<ProjectReference Include="..\App.Domain\App.Domain.csproj" />
+		<ProjectReference Include="..\App.Infra.Data\App.Infra.Data.csproj" />
+		<ProjectReference Include="..\App.Jobs\App.Jobs.csproj" />
+	</ItemGroup>
+
+</Project>

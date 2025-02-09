@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ProjectGuid>{3AF9B826-F284-432C-BCBF-B2A781C5E5C4}</ProjectGuid>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AWSSDK.S3" Version="3.7.413.1" />
+		<PackageReference Include="OpenCvSharp4" Version="4.10.0.20241108" />
+		<PackageReference Include="OpenCvSharp4.runtime.win" Version="4.10.0.20241108" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\App.Domain\App.Domain.csproj" />
+	</ItemGroup>
+</Project>

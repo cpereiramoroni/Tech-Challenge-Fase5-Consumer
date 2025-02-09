@@ -1,0 +1,62 @@
+name: CI/CD Deploy to AWS Lambda Publlihser Videos
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+   build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+          
+      - name: Install dependencies Build
+        run: dotnet restore ./src/App.Web/App.Web.csproj
+        
+      - name: Build
+        run: dotnet build ./src/App.Web/App.Web.csproj --configuration Release
+      
+      - name: Publish artifact
+        uses: actions/upload-artifact@v4  # Updated version
+        with:
+          name: app
+          path: ./src/App.Web/bin/Release/net8.0/
+   deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+     UrlRabbit: ${{ secrets.UrlRabbit }}
+     ConnectionVideos: ${{ secrets.ConnectionVideos }}
+     AWS_REGION: us-east-1
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Download artifact
+        uses: actions/download-artifact@v4  # Updated version
+        with:
+          name: app
+          path: ./src/App.Web/bin/Release/net8.0/
+
+      - name: Install AWS CLI
+        run: dotnet tool install -g Amazon.Lambda.Tools
+      
+      - name: Deploy to AWS Lambda
+        run: dotnet lambda deploy-serverless -sn publisherVideos -sb s3lambdafiapf4 -t src/App.Web/serverless.template --region us-east-1
+
+
