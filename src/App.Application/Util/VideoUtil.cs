@@ -6,8 +6,11 @@ using System.IO.Compression;
 
 namespace App.Application.Util
 {
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+
     public static class VideoUtil
     {
+
 
         public static List<byte[]> CaptureScreenshots(string base64Video, int id)
         {

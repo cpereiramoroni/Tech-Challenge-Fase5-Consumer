@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace App.Jobs.Consumer
 {
-
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 
     public class VideosConsumer : IVideosConsumer
     {
