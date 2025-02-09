@@ -1,6 +1,11 @@
-﻿using App.Domain.Models;
+﻿using App.Domain.Interfaces;
+using App.Domain.Models;
 using App.Infra.Data.Context;
+using Castle.Core.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Moq;
+using System.Collections.Generic;
 using Xunit;
 
 namespace App.Tests.Context
@@ -27,6 +32,6 @@ namespace App.Tests.Context
             Assert.NotNull(context.Videos);
         }
 
-
+       
     }
 }

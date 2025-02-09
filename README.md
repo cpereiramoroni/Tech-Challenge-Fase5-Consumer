@@ -1,4 +1,4 @@
-# TechChallenge-Fase05-Grupo24-Publisher
+# TechChallenge-Fase05-Grupo24-Consumer
 
 Este repositório é dedicado ao microsserviço de Consumidor de videos parados na fila do rabbitMq. Neste foi utilizado o mysql como banco de dados e o RabbitMQ para gerenciar as filas 
 
@@ -31,7 +31,7 @@ Para este microsserviço, utilizamos .NET 8.0
 
 Utilizamos a ferramenta SonarCloud para análise de código e cobertura de testes. Para este microsserviço, atingimos acima de 80% de cobertura, conforme abaixo:
 
-https://sonarcloud.io/summary/overall?id=fiap-05_publisher&branch=master
+https://sonarcloud.io/summary/overall?id=fiap-05_consumer&branch=master
 
 ![image1](/assets/cobertura.png)
 
