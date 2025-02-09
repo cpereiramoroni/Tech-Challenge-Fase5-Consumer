@@ -1,6 +1,6 @@
-# TechChallenge-Grupo24-Produto
+# TechChallenge-Fase05-Grupo24-Publisher
 
-Este repositório é dedicado ao microsserviço de clientes. Neste foi utilizado o mysql no RDS como banco de dados
+Este repositório é dedicado ao microsserviço de Consumidor de videos parados na fila do rabbitMq. Neste foi utilizado o mysql como banco de dados e o RabbitMQ para gerenciar as filas 
 
 O deploy deste foi feito Utilizando aws Lambda - serveless
 análise de código e cobertura de testes utilizando SonarCloud são realizados via Github Actions.
@@ -31,12 +31,7 @@ Para este microsserviço, utilizamos .NET 8.0
 
 Utilizamos a ferramenta SonarCloud para análise de código e cobertura de testes. Para este microsserviço, atingimos acima de 80% de cobertura, conforme abaixo:
 
-https://sonarcloud.io/summary/overall?id=fiap-04_produtos
-
+https://sonarcloud.io/summary/overall?id=fiap-05_publisher&branch=master
 
 ![image1](/assets/cobertura.png)
 
-## BDD 
-Utilizamos BDD para buscar um cliente: 
-
-![image1](/assets/bdd.png)
