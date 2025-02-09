@@ -1,8 +1,6 @@
 ﻿using Amazon.S3;
 using Amazon.S3.Model;
 using App.Application.Interfaces;
-using App.Application.Util;
-using App.Domain.Interfaces;
 using App.Domain.Models;
 using App.Domain.Models.External;
 using System;
